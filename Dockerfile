@@ -4,6 +4,6 @@ RUN curl -Lk 'https://www.eclipse.org/downloads/download.php?file=/eclipse/downl
 
 RUN pacman --noconfirm -Syu archlinux-keyring reflector rsync && \
     reflector --verbose -l 200 -f 50 --sort rate | tee /etc/pacman.d/mirrorlist && \
-    pacman --noconfirm -S sed grep which diffutils gawk gettext gzip tar file git tigervnc gtk3 jdk8-openjdk nmap && \
+    pacman --noconfirm -S sed grep which diffutils gawk gettext gzip tar file git tigervnc gtk3 jdk8-openjdk nmap vi ttf-liberation && \
     pacman --noconfirm -Rnsu reflector rsync && \
     paccache -rk0
